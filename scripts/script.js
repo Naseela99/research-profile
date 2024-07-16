@@ -1,6 +1,15 @@
 // click down to add transition
-
-down_btn = document.querySelector('.down-link');
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > window.innerHeight) {
+      navbar.style.position = 'fixed';
+      navbar.style.top = '0';
+    } else {
+      navbar.style.position = 'sticky';
+      navbar.style.top = '0';
+    }
+  });
+down_btn = document.querySelector('.here');
 
 down_btn.addEventListener('click',scrollToMain);
 
@@ -37,14 +46,14 @@ function scrollToAbout(){
 }
 
 
-res = document.querySelector('.research');
+// res = document.querySelector('.research');
 
-res.addEventListener('click',scrollToStatement);
+// res.addEventListener('click',scrollToStatement);
 
-function scrollToStatement(){
-    document.querySelector('.research-wrapper').scrollIntoView({behavior: 'smooth'})
+// function scrollToStatement(){
+//     document.querySelector('.research-wrapper').scrollIntoView({behavior: 'smooth'})
     
-}
+// }
 
 project = document.querySelector('.projects');
 
@@ -63,13 +72,13 @@ function scrollToProject(){
 //     document.querySelector('.skills-wrapper').scrollIntoView({behavior: 'smooth'})
 // }
 
-exp = document.querySelector('.experience');
+// exp = document.querySelector('.experience');
 
-exp.addEventListener('click',scrollToExp);
+// exp.addEventListener('click',scrollToExp);
 
-function scrollToExp(){
-    document.querySelector('.experience-wrapper').scrollIntoView({behavior: 'smooth'})
-}
+// function scrollToExp(){
+//     document.querySelector('.experience-wrapper').scrollIntoView({behavior: 'smooth'})
+// }
 
 
 news = document.querySelector('.highlights');
@@ -131,3 +140,4 @@ statement.addEventListener('click',scrollToStatement);
 function scrollToStatement(){
     document.querySelector('.research-wrapper').scrollIntoView({behavior: 'smooth'})
 }
+
